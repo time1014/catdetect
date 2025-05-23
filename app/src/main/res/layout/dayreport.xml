@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFE3D6"
+    android:padding="16dp">
+
+    <ScrollView
+        android:id="@+id/day_report_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFE3D6"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/report_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 보고서 헤더 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="4dp"
+                android:backgroundTint="#FFFFFF"
+                android:clipToPadding="false">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="선택한 날짜의 보고서"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_feed_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="총 섭식 횟수 : 0"
+                    android:textSize="16sp"
+                    android:textColor="#666666"/>
+            </LinearLayout>
+
+            <!-- 섭식 기록 카드 영역 -->
+            <LinearLayout
+                android:id="@+id/feed_records_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 동적으로 추가될 섭식 기록 카드들 -->
+            </LinearLayout>
+
+            <!-- 뒤로가기 버튼을 카드 영역 안에 배치 -->
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="← 뒤로가기"
+                android:background="#555555"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

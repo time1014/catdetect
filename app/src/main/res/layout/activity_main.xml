@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 메인 화면 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFE3D6"
+        android:padding="16dp"
+        android:paddingTop="48dp">
+
+        <!-- 설정 버튼: 왼쪽 상단 고정 -->
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="12dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="설정"
+            android:scaleType="fitCenter"
+            android:src="@drawable/setting"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- 앱 이름: 버튼들 사이에 위치 -->
+
+        <!-- 알람 버튼: 오른쪽 상단 고정 -->
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="HOME"
+            android:textColor="#444444"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btn_alarm"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toEndOf="@+id/btn_settings"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_alarm"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="12dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="알람"
+            android:scaleType="fitCenter"
+            android:src="@drawable/alarm"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- 고양이 이미지 -->
+        <ImageView
+            android:id="@+id/cat_image"
+            android:layout_width="237dp"
+            android:layout_height="216dp"
+            android:layout_marginTop="160dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cat_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 슬로건 텍스트 -->
+        <TextView
+            android:id="@+id/text_slogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="우리 고양이의 하루를 케어해요 🐾"
+            android:textSize="16sp"
+            android:textColor="#444444"
+            app:layout_constraintTop_toBottomOf="@+id/cat_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- 실시간 영상 버튼 -->
+        <Button
+            android:id="@+id/btn_live_video"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:text="실시간 영상"
+            app:layout_constraintTop_toBottomOf="@+id/text_slogan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- 섭식 기록 버튼 -->
+        <Button
+            android:id="@+id/btn_feeding_records"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:text="섭식 기록"
+            app:layout_constraintTop_toBottomOf="@id/btn_live_video"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- 일간 보고서 버튼 -->
+        <Button
+            android:id="@+id/btn_daily_report"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:text="일간 보고서"
+            app:layout_constraintTop_toBottomOf="@id/btn_feeding_records"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- 그래프 버튼 -->
+        <Button
+            android:id="@+id/btn_graph"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:text="그래프"
+            app:layout_constraintTop_toBottomOf="@id/btn_daily_report"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 네비게이션 메뉴 -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        app:headerLayout="@layout/nav_header" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

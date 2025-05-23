@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFE3D6">
+
+    <TextView
+        android:id="@+id/timeInfoText"
+        android:text="현재 시간 (KST): --:--"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="알림 받을 시간을 선택하세요 (KST)"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알림 저장"
+        android:layout_marginTop="24dp"/>
+
+    <!-- 뒤로가기 버튼 -->
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="← 뒤로가기"
+        android:background="#555555"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="start"
+        android:layout_marginTop="100dp"/>
+</LinearLayout>

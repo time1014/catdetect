@@ -1,0 +1,54 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#EFE3D6">
+
+    <LinearLayout
+        android:id="@+id/rootLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘의 보고서"
+            android:textSize="24sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <TextView
+            android:id="@+id/textViewTodayDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘 날짜 불러오는중..."
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- 동적으로 텍스트+이미지를 추가할 레이아웃 -->
+        <LinearLayout
+            android:id="@+id/dynamicContentLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 좌하단 뒤로가기 버튼 -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← 뒤로가기"
+            android:background="#555555"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="start"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</ScrollView>
